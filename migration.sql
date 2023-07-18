@@ -1,4 +1,4 @@
-\c todo_database_ka8a;
+\c todo_database;
 
 DROP TABLE IF EXISTS todos;
 
