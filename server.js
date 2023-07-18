@@ -10,18 +10,18 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
 
-const port = process.env.PORT || 3000;
-const pool = new Pool ({
-    user: 'josephcarrillo',
-    host: 'localhost',
-    database: 'todo_database',
-    password: '',
-    port: 5432
-});
-
+const port = process.env.PORT;
 // const pool = new Pool ({
-//   connectionString: process.env.DATABASE_URL
+//     user: 'josephcarrillo',
+//     host: 'localhost',
+//     database: 'todo_database',
+//     password: '',
+//     port: 5432
 // });
+
+const pool = new Pool ({
+  connectionString: process.env.DATABASE_URL
+});
 
 
   // get all
